@@ -1,0 +1,10 @@
+upstream fastcgi_backend {
+ server php:9000;
+}
+
+server {
+ listen 80;
+ server_name www.magento-dev.com;
+ set $MAGE_ROOT /var/www/html/;
+ include /var/www/html/nginx.conf.sample;
+}

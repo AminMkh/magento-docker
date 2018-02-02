@@ -1,0 +1,5 @@
+db/
+cache/
+shared/
+logs/
+.directory
