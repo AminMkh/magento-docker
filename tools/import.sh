@@ -1,4 +1,4 @@
 ./bash_completion
-./magento2_bash_aliases
+source ./magento2_bash_aliases
 ./magento2-bash-completion
 

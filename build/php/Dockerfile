@@ -31,6 +31,7 @@ RUN apt install -y php7.1 php7.1-cli php7.1-common \
     php7.1-gd php7.1-mcrypt php7.1-curl php7.1-zip php7.1-soap php7.1-intl \
     php7.1-fpm
 
+RUN apt install -y php7.1-memcached
 # php fpm
 RUN echo "listen = 0.0.0.0:9000" >> /etc/php/7.1/fpm/pool.d/www.conf
 RUN service php7.1-fpm start
