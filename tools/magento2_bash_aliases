@@ -1,7 +1,8 @@
 # https://github.com/algotech/dotaliases
+# source docker/tools/magento2_bash_aliases
 
 # base magento 2 binary
-alias m2='php bin/magento'
+alias m2='php bin/magento -vvv'
 
 #Install and Upgrade module
 alias m2su='m2 setup:upgrade'
@@ -47,5 +48,7 @@ alias m2='php bin/magento'
 alias m2ms='m2 module:status'
 alias m2md='m2 module:disable'
 alias m2me='m2 module:enable'
-alias m2fp='chmod 777 generated var/cache -R';
+alias m2fp='chmod 777 -R /var/www/html/var /var/www/html/pub/media /var/www/html/pub/static /var/www/html/generated';
+
+alias m2cc='m2 cache:clean; m2fp'
 alias m2cf='m2 cache:flush; m2fp'
