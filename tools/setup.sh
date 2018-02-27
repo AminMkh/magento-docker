@@ -5,7 +5,7 @@ chmod 777 -R /var/www/html/generated
 
 # Install:
 php bin/magento setup:install \
---base-url="http://localhost/" \
+--base-url="http://127.0.0.1/" \
 --db-host="db" \
 --db-name="main" \
 --db-user="main_user" \
@@ -25,6 +25,10 @@ chmod 777 -R /var/www/html/app/etc /var/www/html/var /var/www/html/pub/media /va
 chmod 777 -R /var/www/html/generated
 
 # Crons:
+
 # * * * * * php ./bin/magento cron:run | grep -v "Ran jobs by schedule" >> /var/www/html/var/log/magento.cron.log
+php ./bin/magento cron:run | grep -v "Ran jobs by schedule" >> /var/www/html/var/log/magento.cron.log
 # * * * * * php ./update/cron.php >> /var/www/html/var/log/update.cron.log
+php ./update/cron.php >> /var/www/html/var/log/update.cron.log
 # * * * * * php ./bin/magento setup:cron:run >> /var/www/html/var/log/setup.cron.log
+php ./bin/magento setup:cron:run >> /var/www/html/var/log/setup.cron.log
