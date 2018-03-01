@@ -29,10 +29,8 @@ RUN apt update
 RUN apt install -y php7.1 php7.1-cli php7.1-common \
     php7.1-mbstring php7.1-xml php7.1-mysqlnd php7.1-pdo-sqlite \
     php7.1-gd php7.1-mcrypt php7.1-curl php7.1-zip php7.1-soap php7.1-intl \
-    php7.1-fpm
-
-RUN apt install -y php7.1-memcached
-RUN apt install php7.1-xdebug
+    php7.1-fpm \
+    php7.1-memcached php7.1-xdebug
 
 # php fpm
 RUN echo "listen = 0.0.0.0:9000" >> /etc/php/7.1/fpm/pool.d/www.conf
