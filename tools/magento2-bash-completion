@@ -1,4 +1,4 @@
-# https://raw.githubusercontent.com/yvoronoy/magento2-bash-completion/master/magento2-bash-completion
+# https://github.com/yvoronoy/magento2-bash-completion
 # curl -o /usr/local/etc/bash_completion.d/magento2-bash-completion https://raw.githubusercontent.com/yvoronoy/magento2-bash-completion/master/magento2-bash-completion
 
 _magento2()
@@ -101,4 +101,4 @@ _magento2()
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     __ltrim_colon_completions "$cur"
 }
-complete -o default -F _magento2 magento
+complete -o default -F _magento2 m2
