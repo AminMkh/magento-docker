@@ -52,3 +52,7 @@ services:
     build: build/elasticsearch
     ports:
       - 9200:9200
+    volumes:
+      - ./shared:/shared
+      - ./conf/elasticsearch:/usr/share/elasticsearch/config
+      - ./esdata:/usr/share/elasticsearch/data
