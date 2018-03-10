@@ -49,7 +49,6 @@ services:
       - MEMCACHED_PASSWORD=root_password
       - MEMCACHED_MEMORY_LIMIT=128
   elasticsearch:
-    image: elasticsearch
+    build: build/elasticsearch
     ports:
       - 9200:9200
-      - 9300:9300
