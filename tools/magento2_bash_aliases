@@ -56,3 +56,4 @@ alias m2sdc="m2 setup:di:compile; m2fp"
 alias m2su='m2 setup:upgrade; m2fp'
 
 alias magento='m2'
+alias composer='/usr/bin/composer -vvv'
