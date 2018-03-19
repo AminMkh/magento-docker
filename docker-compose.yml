@@ -16,6 +16,14 @@ services:
       - ../:/var/www/html/
       - ./conf/php:/etc/php/7.1/cli/
       - ./shared:/shared
+#  varnish:
+#    build: build/varnish
+#    volumes:
+#    - ./conf/varnish/default:/etc/default/
+#    - ./conf/varnish/varnish:/etc/varnish/
+#    - ./shared:/shared
+#    ports:
+#      - 8080:80
   db:
     image: mysql
     ports:
