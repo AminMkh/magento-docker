@@ -52,6 +52,8 @@ alias m2fp='chmod 777 -R /var/www/html/var /var/www/html/pub/media /var/www/html
 
 alias m2cc='m2 cache:clean; m2fp'
 alias m2cf='m2 cache:flush; m2fp'
+alias m2cff='rm -rf ./var/di/* ./var/generation/* ./generated/*; m2fp'
+
 alias m2sdc="m2 setup:di:compile; m2fp"
 alias m2su='m2 setup:upgrade; m2fp'
 
